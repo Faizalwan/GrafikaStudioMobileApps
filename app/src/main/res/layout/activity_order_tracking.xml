@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderTrackingAct">
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="@dimen/margin"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/psemibold"
+            android:paddingLeft="18dp"
+            android:paddingRight="24dp"
+            android:text="Order Tracking"
+            android:textAlignment="center"
+            android:textColor="@color/hitamPrimary"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/desc_paket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--Icon Booking-->
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="59dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_booking"
+                    android:layout_width="43dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_booking"
+                    android:tint="@color/abuin" />
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booking"
+                    android:fontFamily="@font/pregular"
+                    android:textSize="8sp"
+                    android:textColor="@color/hitamPrimary"/>
+
+            </LinearLayout>
+
+            <!--Icon Pembayaran-->
+
+            <!--Icon Editing-->
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_editing"
+                    android:tint="@color/abuin"
+                    android:layout_gravity="center"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:src="@drawable/ic_editing"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Editing"
+                    android:fontFamily="@font/pregular"
+                    android:textSize="8sp"
+                    android:textColor="@color/hitamPrimary"/>
+
+            </LinearLayout>
+
+            <!--Icon Pencetakan-->
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_cetak"
+                    android:tint="@color/abuin"
+                    android:layout_gravity="center"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:src="@drawable/ic_pencetakan"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pencetakan"
+                    android:fontFamily="@font/pregular"
+                    android:textSize="8sp"
+                    android:textColor="@color/hitamPrimary"/>
+
+            </LinearLayout>
+
+            <!--Icon Selesai-->
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:tint="@color/abuin"
+                    android:id="@+id/img_selesai"
+                    android:layout_gravity="center"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:src="@drawable/ic_selesai"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selesai"
+                    android:fontFamily="@font/pregular"
+                    android:textSize="8sp"
+                    android:textColor="@color/hitamPrimary"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:id="@+id/linear_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/desc_paket"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pregular"
+            android:text="Status Pesanan : "
+            android:textColor="@color/hitamPrimary"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/psemibold"
+            android:text=""
+            android:textColor="@color/pinkPimary"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_lihat"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:textSize="16sp"
+        android:background="@drawable/bg_btn_primary"
+        android:textColor="@color/putihPrimary"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:text="Lihat Foto"
+        android:fontFamily="@font/psemibold"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/linear_status"
+        tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

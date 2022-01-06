@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailCardFotoAct">
+
+    <ScrollView
+        android:id="@+id/utama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Title-->
+            <LinearLayout
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="@dimen/margin"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="18dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/title_paket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/psemibold"
+                    android:text=""
+                    android:layout_marginLeft="6dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/hitamPrimary"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!--Paket-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclepaket2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin"
+                app:layout_constraintTop_toBottomOf="@+id/title">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <!--Paket-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/paket2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="@dimen/margin"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginEnd="@dimen/margin"-->
+<!--                android:orientation="vertical"-->
+<!--                android:gravity="center"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/paket1">-->
+
+<!--                &lt;!&ndash;Card Paket&ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="182dp"-->
+<!--                    android:elevation="32dp"-->
+<!--                    android:gravity="center"-->
+<!--                    app:cardCornerRadius="8dp">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:src="@drawable/pkeluarga2"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:adjustViewBounds="true"-->
+<!--                        />-->
+
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/bg_overlay_card" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_gravity="bottom"-->
+<!--                        android:layout_marginLeft="@dimen/margin"-->
+<!--                        android:layout_marginRight="@dimen/margin"-->
+<!--                        android:layout_marginBottom="16dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_weight="2"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="vertical">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Keluarga 2"-->
+<!--                                android:fontFamily="@font/pmedium"-->
+<!--                                android:textSize="16sp"-->
+<!--                                android:textColor="@color/putihPrimary"/>-->
+
+<!--                            &lt;!&ndash;Price&ndash;&gt;-->
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:orientation="horizontal">-->
+
+<!--                                <TextView-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:text="Rp"-->
+<!--                                    android:fontFamily="@font/pregular"-->
+<!--                                    android:textSize="14sp"-->
+<!--                                    android:textColor="@color/putihPrimary"/>-->
+
+<!--                                <TextView-->
+<!--                                    android:layout_marginLeft="4dp"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:text="400.000"-->
+<!--                                    android:fontFamily="@font/pregular"-->
+<!--                                    android:textSize="14sp"-->
+<!--                                    android:textColor="@color/putihPrimary"/>-->
+<!--                            </LinearLayout>-->
+
+<!--                        </LinearLayout>-->
+
+<!--                        &lt;!&ndash;Rating&ndash;&gt;-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_gravity="center_vertical"-->
+<!--                                android:layout_width="16dp"-->
+<!--                                android:layout_height="16dp"-->
+<!--                                android:src="@drawable/ic_person"/>-->
+
+<!--                            <TextView-->
+<!--                                android:layout_gravity="center_vertical"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginLeft="8dp"-->
+<!--                                android:text="3-8 orang"-->
+<!--                                android:fontFamily="@font/pmedium"-->
+<!--                                android:textSize="12sp"-->
+<!--                                android:textColor="@color/putihPrimary"/>-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+<!--            </LinearLayout>-->
+
+            <!--Paket-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/paket3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="@dimen/margin"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginEnd="@dimen/margin"-->
+<!--                android:orientation="vertical"-->
+<!--                android:gravity="center"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/paket2">-->
+
+<!--                &lt;!&ndash;Card Paket&ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="182dp"-->
+<!--                    android:elevation="32dp"-->
+<!--                    android:gravity="center"-->
+<!--                    app:cardCornerRadius="8dp">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:src="@drawable/pkeluarga3"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:adjustViewBounds="true"-->
+<!--                        />-->
+
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/bg_overlay_card" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_gravity="bottom"-->
+<!--                        android:layout_marginLeft="@dimen/margin"-->
+<!--                        android:layout_marginRight="@dimen/margin"-->
+<!--                        android:layout_marginBottom="16dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_weight="2"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="vertical">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Keluarga 3"-->
+<!--                                android:fontFamily="@font/pmedium"-->
+<!--                                android:textSize="16sp"-->
+<!--                                android:textColor="@color/putihPrimary"/>-->
+
+<!--                            &lt;!&ndash;Price&ndash;&gt;-->
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:orientation="horizontal">-->
+
+<!--                                <TextView-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:text="Rp"-->
+<!--                                    android:fontFamily="@font/pregular"-->
+<!--                                    android:textSize="14sp"-->
+<!--                                    android:textColor="@color/putihPrimary"/>-->
+
+<!--                                <TextView-->
+<!--                                    android:layout_marginLeft="4dp"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:text="550.000"-->
+<!--                                    android:fontFamily="@font/pregular"-->
+<!--                                    android:textSize="14sp"-->
+<!--                                    android:textColor="@color/putihPrimary"/>-->
+<!--                            </LinearLayout>-->
+
+<!--                        </LinearLayout>-->
+
+<!--                        &lt;!&ndash;Rating&ndash;&gt;-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_gravity="center_vertical"-->
+<!--                                android:layout_width="16dp"-->
+<!--                                android:layout_height="16dp"-->
+<!--                                android:src="@drawable/ic_person"/>-->
+
+<!--                            <TextView-->
+<!--                                android:layout_gravity="center_vertical"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginLeft="8dp"-->
+<!--                                android:text="5-10 orang"-->
+<!--                                android:fontFamily="@font/pmedium"-->
+<!--                                android:textSize="12sp"-->
+<!--                                android:textColor="@color/putihPrimary"/>-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+<!--            </LinearLayout>-->
+
+            <!--Paket-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/paket4"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="@dimen/margin"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginEnd="@dimen/margin"-->
+<!--                android:layout_marginBottom="24dp"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/paket3">-->
+
+<!--                &lt;!&ndash;Card Paket&ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="182dp"-->
+<!--                    android:elevation="32dp"-->
+<!--                    android:gravity="center"-->
+<!--                    app:cardCornerRadius="8dp">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:adjustViewBounds="true"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/pkeluargapremium" />-->
+
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/bg_overlay_card" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="bottom"-->
+<!--                        android:layout_marginLeft="@dimen/margin"-->
+<!--                        android:layout_marginRight="@dimen/margin"-->
+<!--                        android:layout_marginBottom="16dp"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="2"-->
+<!--                            android:orientation="vertical">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:fontFamily="@font/pmedium"-->
+<!--                                android:text="Keluarga Premium"-->
+<!--                                android:textColor="@color/putihPrimary"-->
+<!--                                android:textSize="16sp" />-->
+
+<!--                            &lt;!&ndash;Price&ndash;&gt;-->
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:orientation="horizontal">-->
+
+<!--                                <TextView-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:fontFamily="@font/pregular"-->
+<!--                                    android:text="Rp"-->
+<!--                                    android:textColor="@color/putihPrimary"-->
+<!--                                    android:textSize="14sp" />-->
+
+<!--                                <TextView-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginLeft="4dp"-->
+<!--                                    android:fontFamily="@font/pregular"-->
+<!--                                    android:text="1.350.000"-->
+<!--                                    android:textColor="@color/putihPrimary"-->
+<!--                                    android:textSize="14sp" />-->
+<!--                            </LinearLayout>-->
+
+<!--                        </LinearLayout>-->
+
+<!--                        &lt;!&ndash;Rating&ndash;&gt;-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="16dp"-->
+<!--                                android:layout_height="16dp"-->
+<!--                                android:layout_gravity="center_vertical"-->
+<!--                                android:src="@drawable/ic_person" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_vertical"-->
+<!--                                android:layout_marginLeft="8dp"-->
+<!--                                android:fontFamily="@font/pmedium"-->
+<!--                                android:text="7-15 orang"-->
+<!--                                android:textColor="@color/putihPrimary"-->
+<!--                                android:textSize="12sp" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+<!--            </LinearLayout>-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailRewardAct">
+
+    <ScrollView
+        android:id="@+id/scroll__reward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <!--Title-->
+    <LinearLayout
+        android:id="@+id/title_detail_reward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="@dimen/margin"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/psemibold"
+            android:text="Detail Reward"
+            android:paddingRight="24dp"
+            android:textAlignment="center"
+            android:textColor="@color/hitamPrimary"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!--Paket-->
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_detail_reward">
+
+        <!--Card Paket-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="182dp"
+            android:elevation="32dp"
+            android:gravity="center"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:id="@+id/thumbnail_reward"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_reward" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_overlay_card" />
+            <LinearLayout
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:id="@+id/judul_reward"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/psemibold"
+                        android:text="Diskon 10% Paket Kelas"
+                        android:textColor="@color/putihPrimary"
+                        android:textSize="16sp" />
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_point" />
+
+                        <TextView
+                            android:id="@+id/poin_reward"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:fontFamily="@font/pmedium"
+                            android:text="500 Poin"
+                            android:textColor="@color/putihPrimary"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+
+    <!--Deskripsi Reward-->
+    <LinearLayout
+        android:id="@+id/deskripsi_reward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="@dimen/margin"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/psemibold"
+            android:text="Masa Berlaku"
+            android:textColor="@color/hitamPrimary"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/masa_berlaku"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/pmedium"
+                android:lineSpacingExtra="4dp"
+                android:text=""
+                android:textColor="@color/hitamPrimary"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/psemibold"
+            android:text="Syarat dan Ketentuan"
+            android:textColor="@color/hitamPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/syarat_reward"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/pregular"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/syarat"
+            android:textColor="@color/hitamPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/psemibold"
+            android:text="Mengalami Kesulitan ?"
+            android:textColor="@color/hitamPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/help_desc"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pregular"
+            android:text="@string/kesulitan"
+            android:textColor="@color/hitamPrimary"
+            android:textSize="14sp" />
+
+        <!--Deskripsi Bantuan-->
+
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_phone"/>
+            <TextView
+                android:id="@+id/help_hp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_hp"
+                android:fontFamily="@font/pregular"
+                android:textColor="@color/hitamPrimary"
+                android:textSize="14sp"
+                android:layout_marginLeft="12dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_email"/>
+            <TextView
+                android:id="@+id/help_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textColor="@color/hitamPrimary"
+                android:fontFamily="@font/pregular"
+                android:textSize="14sp"
+                android:layout_marginLeft="12dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Button Tukar Poin-->
+    <Button
+        android:id="@+id/btn_tukar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="@dimen/margin"
+        android:background="@drawable/bg_btn_primary"
+        android:fontFamily="@font/psemibold"
+        android:text="Tukarkan Poin"
+        android:onClick="ShowPopUpReward"
+        android:textAllCaps="false"
+        android:textColor="@color/putihPrimary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deskripsi_reward" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

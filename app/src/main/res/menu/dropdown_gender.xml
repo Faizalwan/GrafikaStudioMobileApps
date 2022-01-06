@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dropdown_gender1"
+        android:title="Laki-laki"/>
+    <item
+        android:id="@+id/dropdown_gender2"
+        android:title="Perempuan"/>
+    <item
+        android:id="@+id/dropdown_gender3"
+        android:title="Lainnya"/>
+
+</menu>

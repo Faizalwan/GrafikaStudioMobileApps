@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp">
+    <LinearLayout
+        android:id="@+id/paket_funtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="0dp">
+
+        <!--Card Paket-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="142dp"
+            android:layout_height="197dp"
+            android:elevation="32dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:id="@+id/imgpaket"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_overlay_card" />
+
+            <TextView
+                android:id="@+id/paket_paten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:fontFamily="@font/psemibold"
+                android:text="Paket"
+                android:layout_marginBottom="28dp"
+                android:textAlignment="center"
+                android:textColor="@color/putihPrimary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/titlepaket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/psemibold"
+                android:text="Funtime"
+                android:textAlignment="center"
+                android:textColor="@color/putihPrimary"
+                android:textSize="14sp" />
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginAct">
+
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="260dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logografikablue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="@dimen/margin"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/pregular"
+                android:text="Username"
+                android:textColor="@color/hitamPrimary"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/xusername"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_form"
+                android:fontFamily="@font/pregular"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:inputType="text"
+                android:lines="1"
+                android:paddingLeft="12dp"
+                android:textColor="@color/hitamPrimary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/error_username"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:text=""
+                android:textColor="@color/merahPimary"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/pregular"
+                android:text="Password  "
+                android:textColor="@color/hitamPrimary"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/xpassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_form"
+                android:fontFamily="@font/pregular"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:lines="1"
+                android:paddingLeft="12dp"
+                android:textColor="@color/hitamPrimary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/error_password"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:text=""
+                android:textColor="@color/merahPimary"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_masuk"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="@dimen/margin"
+        android:background="@drawable/bg_btn_primary"
+        android:fontFamily="@font/psemibold"
+        android:text="Masuk"
+        android:textAllCaps="false"
+        android:textColor="@color/putihPrimary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearlayout" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/pregular"
+        android:text="Belum punya akun ? silahkan tekan daftar"
+        android:textColor="@color/abuSedang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_masuk" />
+
+
+    <TextView
+        android:id="@+id/btn_daftarskrg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pregular"
+        android:text="Daftar Sekarang"
+        android:textColor="@color/hitamPrimary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

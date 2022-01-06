@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_reward"
+        android:name="com.example.grafikastudio.ui.reward.RewardFragment"
+        android:label="Reward"
+        tools:layout="@layout/fragment_reward" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.grafikastudio.ui.profile.ProfileFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_booking"
+        android:name="com.example.grafikastudio.ui.booking.BookingFragment"
+        android:label="Booking"
+        tools:layout="@layout/fragment_booking" />
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.grafikastudio.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+</navigation>

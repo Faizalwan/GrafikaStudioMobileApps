@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Grafika Studio</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="no_hp">+6288218254020</string>
+    <string name="email">grafikastudio@gmail.com</string>
+    <string name="kesulitan">Apabila anda mengalami kesulitan dalam menukarkan poin, silahkan hubungi bantuan dibawah ini</string>
+    <string name="syarat">&#8226; Poin hanya didapatkan dari setiap kali transaksi\n&#8226; Poin yang sudah ditukarkan tidak dapat dikembalikan\n&#8226; Hanya berlaku untuk 1 hadiah setiap pelanggan\n</string>
+    <string name="title_activity_detail_card_foto">DetailCardFotoAct</string>
+    <string name="desc_paket">&#8226; 7-15 Orang\n&#8226; Cetak 1x24RP + Frame\n&#8226; Cetak 4x8RP + Frame Minimalis\n&#8226; Cetak 1x Album Triple\n&#8226; Cetak 10x4RP + Frame Minimalist\n&#8226; 30 File Edit\n&#8226; 2 Kostum\n&#8226; 7 Formasi\n&#8226; Background (Semen Expose / Kayu Profile)</string>
+    <string name="extras_tambahan">&#8226; + Orang : Rp. 10K/orang\n&#8226; + 1 File : Rp. 5K\n&#8226; + 1 Kostum : Rp. 50K\n&#8226; + 1 Formasi : Rp. 50K</string>
+    <string name="extras_cetak">&#8226; 4RP : Rp. 10K\n&#8226; 4RP + Frame : Rp. 25K\n&#8226; 8RP : Rp. 15K\n&#8226; 8RP + Frame : Rp. 50K\n&#8226; 12RP + Frame : Rp. 135K\n&#8226; 16RP + Frame : Rp. 195K\n&#8226; 20RP + Frame : Rp. 245K\n&#8226; 24RP + Frame : Rp. 315K\n&#8226; Album Triple : Rp. 80K</string>
+    <string name="extras_edit">&#8226; Kolase 6 Feeds : Rp. 40K\n&#8226; Kolase 9 Feeds : Rp. 55K\n&#8226; Kolase 12 Feeds : Rp. 65K</string>
+    <string name="data_booking">&#8226; Nama Lengkap\n&#8226; Nomor Whatsapp\n&#8226; Email\n&#8226; Akun Instagram\n&#8226; Alamat Rumah\n&#8226; Extras</string>
+    <string name="titikdua_databooking">:\n:\n:\n:\n: </string>
+
+    <string name="data_extras">&#8226; Orang\n&#8226; 4RP\n&#8226; Kolase</string>
+    <string name="titikdua_dataextras">:\n:\n: </string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_deskripsi_paket">DeskripsiPaketAct</string>
+</resources>

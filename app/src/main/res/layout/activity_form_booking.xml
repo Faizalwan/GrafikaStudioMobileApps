@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormBookingAct">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Title-->
+            <LinearLayout
+                android:id="@+id/title_form_booking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="@dimen/margin"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/psemibold"
+                    android:text="Form Booking"
+                    android:paddingRight="24dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/hitamPrimary"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+            <!--Form-->
+            <LinearLayout
+                android:id="@+id/linear_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_form_booking">
+
+                <LinearLayout
+                    android:id="@+id/radio_akun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/title_radio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/pregular"
+                            android:text="Ingin menggunakan data akun ?"
+                            android:textColor="@color/hitamPrimary"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:layout_marginLeft="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/pregular"
+                            android:text="*"
+                            android:textColor="@color/merahPimary"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <RadioButton android:id="@+id/radio_ya"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                           android:buttonTint="@color/hitamPrimary"
+                            android:text="Ya"
+                            android:onClick="onRadioButtonClicked"/>
+                        <RadioButton android:id="@+id/radio_tidak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14dp"
+                            android:buttonTint="@color/hitamPrimary"
+                            android:textCursorDrawable="@drawable/cursor_color"
+                            android:text="Tidak"
+                            android:onClick="onRadioButtonClicked"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/title_namalengkap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/pregular"
+                            android:text="Nama Lengkap"
+                            android:textColor="@color/hitamPrimary"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:layout_marginLeft="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/pregular"
+                            android:text="*"
+                            android:textColor="@color/merahPimary"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/nama_lengkap"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_input_form"
+                        android:fontFamily="@font/pregular"
+                        android:textCursorDrawable="@drawable/cursor_color"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:paddingLeft="12dp"
+                        android:textColor="@color/hitamPrimary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/error_namalengkap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/pregular"
+                        android:text=""
+                        android:textColor="@color/merahPimary"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/title_no_wa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/pregular"
+                            android:text="Nomor Whatsapp"
+                            android:textColor="@color/hitamPrimary"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:layout_marginLeft="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/pregular"
+                            android:text="*"
+                            android:textColor="@color/merahPimary"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/no_wa"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_input_form"
+                        android:fontFamily="@font/pregular"
+                        android:inputType="number"
+                        android:textCursorDrawable="@drawable/cursor_color"
+                        android:lines="1"
+                        android:paddingLeft="12dp"
+                        android:textColor="@color/hitamPrimary"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/error_wa"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pregular"
+                        android:text=""
+                        android:textColor="@color/merahPimary"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/title_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/pregular"
+                            android:text="Email"
+                            android:textColor="@color/hitamPrimary"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:layout_marginLeft="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/pregular"
+                            android:text="*"
+                            android:textColor="@color/merahPimary"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_input_form"
+                        android:fontFamily="@font/pregular"
+                        android:inputType="textEmailAddress"
+                        android:textCursorDrawable="@drawable/cursor_color"
+                        android:lines="1"
+                        android:paddingLeft="12dp"
+                        android:textColor="@color/hitamPrimary"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/error_email"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pregular"
+                        android:text=""
+                        android:textColor="@color/merahPimary"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/pregular"
+                        android:text="Akun Instagram"
+                        android:textColor="@color/hitamPrimary"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <EditText
+                            android:enabled="false"
+                            android:text="\u0040"
+                            android:id="@+id/akun_instagram"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="7dp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/bg_input_form_disabled"
+                            android:fontFamily="@font/pregular"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/abuDisabled"
+                            android:textSize="22sp" />
+                        <EditText
+                            android:layout_gravity="center"
+                            android:id="@+id/akun_ig"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/bg_input_form"
+                            android:textCursorDrawable="@drawable/cursor_color"
+                            android:fontFamily="@font/pregular"
+                            android:inputType="textEmailAddress"
+                            android:lines="1"
+                            android:paddingLeft="12dp"
+                            android:textColor="@color/hitamPrimary"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/title_alamat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/pregular"
+                            android:text="Alamat Rumah"
+                            android:textColor="@color/hitamPrimary"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:layout_marginLeft="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/pregular"
+                            android:text="*"
+                            android:textColor="@color/merahPimary"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:gravity="top|left"
+                        android:id="@+id/alamat_rumah"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:background="@drawable/bg_input_form"
+                        android:textCursorDrawable="@drawable/cursor_color"
+                        android:fontFamily="@font/pregular"
+                        android:inputType="textMultiLine"
+                        android:paddingTop="12dp"
+                        android:paddingLeft="12dp"
+                        android:maxLength="100"
+                        android:textColor="@color/hitamPrimary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/error_alamat"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pregular"
+                        android:text=""
+                        android:textColor="@color/merahPimary"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/pregular"
+                        android:text="Paket"
+                        android:textColor="@color/hitamPrimary"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/paket"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_input_form_disabled"
+                        android:fontFamily="@font/pregular"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:enabled="false"
+                        android:paddingLeft="12dp"
+                        android:text="Keluarga Premium"
+                        android:textColor="@color/abuDisabled"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <!--Tanggal dan Jam-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--Tanggal-->
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/title_tgl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:fontFamily="@font/pregular"
+                                android:text="Tanggal"
+                                android:textColor="@color/hitamPrimary"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_marginLeft="4dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:fontFamily="@font/pregular"
+                                android:text="*"
+                                android:textColor="@color/merahPimary"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btn_datepicker"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/bg_input_satu"
+                            android:fontFamily="@font/pregular"
+                            android:textAlignment="textStart"
+                            android:drawableEnd="@drawable/ic_calendar"
+                            android:paddingRight="16dp"
+                            android:paddingLeft="12dp"
+                            android:textColor="@color/hitamPrimary"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/error_tanggal"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pregular"
+                            android:text=""
+                            android:textColor="@color/merahPimary"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                    <!--Jam-->
+                    <LinearLayout
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/title_jam"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:fontFamily="@font/pregular"
+                                android:text="Jam"
+                                android:textColor="@color/hitamPrimary"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_marginLeft="4dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:fontFamily="@font/pregular"
+                                android:text="*"
+                                android:textColor="@color/merahPimary"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <Button
+                            android:textAllCaps="false"
+                            android:id="@+id/btn_jam"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/bg_input_satu"
+                            android:fontFamily="@font/pregular"
+                            android:textAlignment="textStart"
+                            android:drawableEnd="@drawable/ic_down"
+                            android:paddingRight="16dp"
+                            android:paddingLeft="12dp"
+                            android:textColor="@color/hitamPrimary"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/error_jam"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pregular"
+                            android:text=""
+                            android:textColor="@color/merahPimary"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/pregular"
+                        android:text="Extras (opsional)"
+                        android:textColor="@color/hitamPrimary"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:gravity="top|left"
+                        android:id="@+id/extras"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:background="@drawable/bg_input_form"
+                        android:textCursorDrawable="@drawable/cursor_color"
+                        android:fontFamily="@font/pregular"
+                        android:inputType="textMultiLine"
+                        android:paddingTop="12dp"
+                        android:paddingLeft="12dp"
+                        android:maxLength="100"
+                        android:textColor="@color/hitamPrimary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Button Simpan-->
+            <Button
+                android:id="@+id/btn_simpan"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="@dimen/margin"
+                android:background="@drawable/bg_btn_primary"
+                android:fontFamily="@font/psemibold"
+                android:text="Simpan"
+                android:textAllCaps="false"
+                android:textColor="@color/putihPrimary"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_form" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

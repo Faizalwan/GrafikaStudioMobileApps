@@ -1,0 +1,2 @@
+rootProject.name='Grafika Studio'
+include ':app'

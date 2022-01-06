@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/title_hasil_foto">
+
+        <Button
+            android:id="@+id/item_hasilfoto"
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_list_hasil_foto"
+            android:fontFamily="@font/psemibold"
+            android:text="GS1402135"
+            android:textAllCaps="false"
+            android:textColor="@color/putihPrimary"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

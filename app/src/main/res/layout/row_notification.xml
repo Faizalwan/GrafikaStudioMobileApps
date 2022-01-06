@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginBottom="16dp"
+            android:id="@+id/list_notif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_notif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/psemibold"
+                android:text=""
+                android:textColor="@color/hitamPrimary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_notif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:lineSpacingExtra="4dp"
+                android:text=""
+                android:textColor="@color/abuSedang"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/abuTipis" />
+        </LinearLayout>
+
+</LinearLayout>
